@@ -1,0 +1,895 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.semanticweb.org/jordi/ontologies/2023/3/wineMarket"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="http://www.semanticweb.org/jordi/ontologies/2023/3/wineMarket">
+    <Prefix name="" IRI="http://www.semanticweb.org/jordi/ontologies/2023/3/wineMarket/"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <Literal>Author : Jordi Mimbrera</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <Literal>Spanish wine market</Literal>
+    </Annotation>
+    <Declaration>
+        <Class IRI="#Country"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Expensive"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Moderate"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#RedWine"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#RoseWine"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Top"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#WhiteWine"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Wine"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#WineAcidity"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#WineAroma"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#WineBody"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#WineCatalog"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#WineColor"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#WineFlavor"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#WinePrice"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#WineRating"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#WineReviews"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#WineSugar"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#WineType"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#WineYear"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://dbpedia.org/ontology/WineRegion"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://dbpedia.org/ontology/Winery"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasAroma"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasColor"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasFlavor"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasProducer"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasWineCatalog"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#produce"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="https://dbpedia.org/ontology/isPartOfWineRegion"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="https://dbpedia.org/ontology/madeIn"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasPrice"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasRating"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasReviews"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasSugar"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="https://dbpedia.org/ontology/hasAcidity"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="https://dbpedia.org/ontology/hasBody"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="https://dbpedia.org/ontology/hasYear"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Fruity"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Light"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Price_100"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Price_20"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Rating_3"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Rating_5"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Red"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Ribera_del_Duero"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Rose"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Strong"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Sweet"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Unico"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Vega_Sicilia"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#White"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Year2009"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="rdfs:sameAs"/>
+    </Declaration>
+    <EquivalentClasses>
+        <Class IRI="#RedWine"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Wine"/>
+            <ObjectHasValue>
+                <ObjectProperty IRI="#hasColor"/>
+                <NamedIndividual IRI="#Red"/>
+            </ObjectHasValue>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#RoseWine"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Wine"/>
+            <ObjectHasValue>
+                <ObjectProperty IRI="#hasColor"/>
+                <NamedIndividual IRI="#Rose"/>
+            </ObjectHasValue>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#WhiteWine"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Wine"/>
+            <ObjectHasValue>
+                <ObjectProperty IRI="#hasColor"/>
+                <NamedIndividual IRI="#White"/>
+            </ObjectHasValue>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#WineAcidity"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="https://dbpedia.org/ontology/hasAcidity"/>
+            <DatatypeRestriction>
+                <Datatype abbreviatedIRI="xsd:positiveInteger"/>
+                <FacetRestriction facet="http://www.w3.org/2001/XMLSchema#minInclusive">
+                    <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#positiveInteger">1</Literal>
+                </FacetRestriction>
+                <FacetRestriction facet="http://www.w3.org/2001/XMLSchema#maxInclusive">
+                    <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#positiveInteger">5</Literal>
+                </FacetRestriction>
+            </DatatypeRestriction>
+        </DataSomeValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#WineAcidity"/>
+        <DataExactCardinality cardinality="1">
+            <DataProperty IRI="https://dbpedia.org/ontology/hasAcidity"/>
+            <Datatype abbreviatedIRI="xsd:positiveInteger"/>
+        </DataExactCardinality>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#WineAroma"/>
+        <ObjectOneOf>
+            <NamedIndividual IRI="#Fruity"/>
+            <NamedIndividual IRI="#Light"/>
+            <NamedIndividual IRI="#Strong"/>
+            <NamedIndividual IRI="#Sweet"/>
+        </ObjectOneOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#WineBody"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="https://dbpedia.org/ontology/hasBody"/>
+            <DatatypeRestriction>
+                <Datatype abbreviatedIRI="xsd:positiveInteger"/>
+                <FacetRestriction facet="http://www.w3.org/2001/XMLSchema#minInclusive">
+                    <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#positiveInteger">1</Literal>
+                </FacetRestriction>
+                <FacetRestriction facet="http://www.w3.org/2001/XMLSchema#maxInclusive">
+                    <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#positiveInteger">5</Literal>
+                </FacetRestriction>
+            </DatatypeRestriction>
+        </DataSomeValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#WineBody"/>
+        <DataExactCardinality cardinality="1">
+            <DataProperty IRI="https://dbpedia.org/ontology/hasBody"/>
+            <Datatype abbreviatedIRI="xsd:positiveInteger"/>
+        </DataExactCardinality>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#WineCatalog"/>
+        <ObjectUnionOf>
+            <Class IRI="#WineAroma"/>
+            <Class IRI="#WineColor"/>
+            <Class IRI="#WineFlavor"/>
+        </ObjectUnionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#WineColor"/>
+        <ObjectOneOf>
+            <NamedIndividual IRI="#Red"/>
+            <NamedIndividual IRI="#Rose"/>
+            <NamedIndividual IRI="#White"/>
+        </ObjectOneOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#WinePrice"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="#hasPrice"/>
+            <Datatype abbreviatedIRI="xsd:decimal"/>
+        </DataSomeValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#WinePrice"/>
+        <DataExactCardinality cardinality="1">
+            <DataProperty IRI="#hasPrice"/>
+            <Datatype abbreviatedIRI="xsd:decimal"/>
+        </DataExactCardinality>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#WineRating"/>
+        <DataExactCardinality cardinality="1">
+            <DataProperty IRI="#hasRating"/>
+            <Datatype abbreviatedIRI="xsd:float"/>
+        </DataExactCardinality>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#WineSugar"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="#hasSugar"/>
+            <DatatypeRestriction>
+                <Datatype abbreviatedIRI="xsd:positiveInteger"/>
+                <FacetRestriction facet="http://www.w3.org/2001/XMLSchema#minInclusive">
+                    <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#positiveInteger">1</Literal>
+                </FacetRestriction>
+                <FacetRestriction facet="http://www.w3.org/2001/XMLSchema#maxInclusive">
+                    <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#positiveInteger">5</Literal>
+                </FacetRestriction>
+            </DatatypeRestriction>
+        </DataSomeValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#WineSugar"/>
+        <DataExactCardinality cardinality="1">
+            <DataProperty IRI="#hasSugar"/>
+            <Datatype abbreviatedIRI="xsd:positiveInteger"/>
+        </DataExactCardinality>
+    </EquivalentClasses>
+    <SubClassOf>
+        <Class IRI="#Expensive"/>
+        <Class IRI="#WinePrice"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Moderate"/>
+        <Class IRI="#WinePrice"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#RedWine"/>
+        <Class IRI="#Wine"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#RoseWine"/>
+        <Class IRI="#Wine"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Top"/>
+        <Class IRI="#WineRating"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#WhiteWine"/>
+        <Class IRI="#Wine"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Wine"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="https://dbpedia.org/ontology/madeIn"/>
+            <Class IRI="https://dbpedia.org/ontology/WineRegion"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Wine"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#hasProducer"/>
+            <Class IRI="https://dbpedia.org/ontology/Winery"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Wine"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="#hasColor"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Wine"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="#hasFlavor"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Wine"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="#hasProducer"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Wine"/>
+        <DataExactCardinality cardinality="1">
+            <DataProperty IRI="#hasPrice"/>
+            <Datatype abbreviatedIRI="xsd:decimal"/>
+        </DataExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Wine"/>
+        <DataExactCardinality cardinality="1">
+            <DataProperty IRI="#hasRating"/>
+            <Datatype abbreviatedIRI="xsd:float"/>
+        </DataExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Wine"/>
+        <DataExactCardinality cardinality="1">
+            <DataProperty IRI="https://dbpedia.org/ontology/hasAcidity"/>
+            <Datatype abbreviatedIRI="xsd:positiveInteger"/>
+        </DataExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Wine"/>
+        <DataExactCardinality cardinality="1">
+            <DataProperty IRI="https://dbpedia.org/ontology/hasBody"/>
+            <Datatype abbreviatedIRI="xsd:positiveInteger"/>
+        </DataExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Wine"/>
+        <DataExactCardinality cardinality="1">
+            <DataProperty IRI="https://dbpedia.org/ontology/hasYear"/>
+            <Datatype abbreviatedIRI="xsd:positiveInteger"/>
+        </DataExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#WineAcidity"/>
+        <Class IRI="#WineFlavor"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#WineAroma"/>
+        <Class IRI="#WineCatalog"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#WineBody"/>
+        <Class IRI="#WineFlavor"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#WineColor"/>
+        <Class IRI="#WineCatalog"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#WineFlavor"/>
+        <Class IRI="#WineCatalog"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#WineSugar"/>
+        <Class IRI="#WineFlavor"/>
+    </SubClassOf>
+    <ClassAssertion>
+        <Class IRI="#WinePrice"/>
+        <NamedIndividual IRI="#Price_100"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#WinePrice"/>
+        <NamedIndividual IRI="#Price_20"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#WineRating"/>
+        <NamedIndividual IRI="#Rating_3"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#WineRating"/>
+        <NamedIndividual IRI="#Rating_5"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="https://dbpedia.org/ontology/WineRegion"/>
+        <NamedIndividual IRI="#Ribera_del_Duero"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#WineYear"/>
+        <NamedIndividual IRI="#Year2009"/>
+    </ClassAssertion>
+    <DifferentIndividuals>
+        <NamedIndividual IRI="#Fruity"/>
+        <NamedIndividual IRI="#Light"/>
+        <NamedIndividual IRI="#Strong"/>
+        <NamedIndividual IRI="#Sweet"/>
+    </DifferentIndividuals>
+    <DifferentIndividuals>
+        <NamedIndividual IRI="#Red"/>
+        <NamedIndividual IRI="#Rose"/>
+        <NamedIndividual IRI="#White"/>
+    </DifferentIndividuals>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasAroma"/>
+        <NamedIndividual IRI="#Unico"/>
+        <NamedIndividual IRI="#Fruity"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasColor"/>
+        <NamedIndividual IRI="#Unico"/>
+        <NamedIndividual IRI="#Red"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasProducer"/>
+        <NamedIndividual IRI="#Unico"/>
+        <NamedIndividual IRI="#Vega_Sicilia"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="https://dbpedia.org/ontology/madeIn"/>
+        <NamedIndividual IRI="#Unico"/>
+        <NamedIndividual IRI="#Ribera_del_Duero"/>
+    </ObjectPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasPrice"/>
+        <NamedIndividual IRI="#Price_100"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">100.0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasPrice"/>
+        <NamedIndividual IRI="#Price_20"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">20.0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasRating"/>
+        <NamedIndividual IRI="#Rating_3"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">3.0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasRating"/>
+        <NamedIndividual IRI="#Rating_5"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">5.0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasPrice"/>
+        <NamedIndividual IRI="#Unico"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">105</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasRating"/>
+        <NamedIndividual IRI="#Unico"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">5.0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="https://dbpedia.org/ontology/hasYear"/>
+        <NamedIndividual IRI="#Unico"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#positiveInteger">2009</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="https://dbpedia.org/ontology/hasYear"/>
+        <NamedIndividual IRI="#Year2009"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#positiveInteger">2009</Literal>
+    </DataPropertyAssertion>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasAroma"/>
+        <ObjectProperty IRI="#hasWineCatalog"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasColor"/>
+        <ObjectProperty IRI="#hasWineCatalog"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasFlavor"/>
+        <ObjectProperty IRI="#hasWineCatalog"/>
+    </SubObjectPropertyOf>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#hasProducer"/>
+        <ObjectProperty IRI="#produce"/>
+    </InverseObjectProperties>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="#hasAroma"/>
+    </FunctionalObjectProperty>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="#hasColor"/>
+    </FunctionalObjectProperty>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="#hasFlavor"/>
+    </FunctionalObjectProperty>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="#hasProducer"/>
+    </FunctionalObjectProperty>
+    <AsymmetricObjectProperty>
+        <ObjectProperty IRI="https://dbpedia.org/ontology/isPartOfWineRegion"/>
+    </AsymmetricObjectProperty>
+    <IrreflexiveObjectProperty>
+        <ObjectProperty IRI="https://dbpedia.org/ontology/isPartOfWineRegion"/>
+    </IrreflexiveObjectProperty>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasAroma"/>
+        <Class IRI="#Wine"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasColor"/>
+        <Class IRI="#Wine"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasFlavor"/>
+        <Class IRI="#Wine"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasProducer"/>
+        <Class IRI="#Wine"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasWineCatalog"/>
+        <Class IRI="#Wine"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#produce"/>
+        <Class IRI="https://dbpedia.org/ontology/Winery"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="https://dbpedia.org/ontology/isPartOfWineRegion"/>
+        <Class IRI="https://dbpedia.org/ontology/WineRegion"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="https://dbpedia.org/ontology/madeIn"/>
+        <Class IRI="#Wine"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasAroma"/>
+        <Class IRI="#WineAroma"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasColor"/>
+        <Class IRI="#WineColor"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasFlavor"/>
+        <Class IRI="#WineFlavor"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasProducer"/>
+        <Class IRI="https://dbpedia.org/ontology/Winery"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasWineCatalog"/>
+        <Class IRI="#WineCatalog"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#produce"/>
+        <Class IRI="#Wine"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="https://dbpedia.org/ontology/isPartOfWineRegion"/>
+        <Class IRI="https://dbpedia.org/ontology/WineRegion"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="https://dbpedia.org/ontology/madeIn"/>
+        <Class IRI="https://dbpedia.org/ontology/WineRegion"/>
+    </ObjectPropertyRange>
+    <FunctionalDataProperty>
+        <DataProperty IRI="#hasPrice"/>
+    </FunctionalDataProperty>
+    <FunctionalDataProperty>
+        <DataProperty IRI="#hasRating"/>
+    </FunctionalDataProperty>
+    <FunctionalDataProperty>
+        <DataProperty IRI="#hasSugar"/>
+    </FunctionalDataProperty>
+    <FunctionalDataProperty>
+        <DataProperty IRI="https://dbpedia.org/ontology/hasAcidity"/>
+    </FunctionalDataProperty>
+    <FunctionalDataProperty>
+        <DataProperty IRI="https://dbpedia.org/ontology/hasBody"/>
+    </FunctionalDataProperty>
+    <FunctionalDataProperty>
+        <DataProperty IRI="https://dbpedia.org/ontology/hasYear"/>
+    </FunctionalDataProperty>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasPrice"/>
+        <Class IRI="#WinePrice"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasRating"/>
+        <Class IRI="#WineRating"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasReviews"/>
+        <Class IRI="#WineReviews"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasSugar"/>
+        <Class IRI="#WineSugar"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="https://dbpedia.org/ontology/hasAcidity"/>
+        <Class IRI="#WineAcidity"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="https://dbpedia.org/ontology/hasBody"/>
+        <Class IRI="#WineBody"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="https://dbpedia.org/ontology/hasYear"/>
+        <Class IRI="#WineYear"/>
+    </DataPropertyDomain>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasPrice"/>
+        <Datatype abbreviatedIRI="xsd:decimal"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasRating"/>
+        <Datatype abbreviatedIRI="xsd:float"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasReviews"/>
+        <Datatype abbreviatedIRI="xsd:positiveInteger"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasSugar"/>
+        <Datatype abbreviatedIRI="xsd:positiveInteger"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="https://dbpedia.org/ontology/hasAcidity"/>
+        <Datatype abbreviatedIRI="xsd:positiveInteger"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="https://dbpedia.org/ontology/hasBody"/>
+        <Datatype abbreviatedIRI="xsd:positiveInteger"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="https://dbpedia.org/ontology/hasYear"/>
+        <Datatype abbreviatedIRI="xsd:positiveInteger"/>
+    </DataPropertyRange>
+    <DLSafeRule>
+        <Body>
+            <ClassAtom>
+                <Class IRI="#Wine"/>
+                <Variable IRI="urn:swrl:var#w"/>
+            </ClassAtom>
+            <DataPropertyAtom>
+                <DataProperty IRI="#hasPrice"/>
+                <Variable IRI="urn:swrl:var#w"/>
+                <Variable IRI="urn:swrl:var#p"/>
+            </DataPropertyAtom>
+            <BuiltInAtom IRI="http://www.w3.org/2003/11/swrlb#greaterThanOrEqual">
+                <Variable IRI="urn:swrl:var#p"/>
+                <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">100</Literal>
+            </BuiltInAtom>
+        </Body>
+        <Head>
+            <ClassAtom>
+                <Class IRI="#Expensive"/>
+                <Variable IRI="urn:swrl:var#w"/>
+            </ClassAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Body>
+            <ClassAtom>
+                <Class IRI="#Wine"/>
+                <Variable IRI="urn:swrl:var#w"/>
+            </ClassAtom>
+            <DataPropertyAtom>
+                <DataProperty IRI="#hasPrice"/>
+                <Variable IRI="urn:swrl:var#w"/>
+                <Variable IRI="urn:swrl:var#p"/>
+            </DataPropertyAtom>
+            <BuiltInAtom IRI="http://www.w3.org/2003/11/swrlb#lessThan">
+                <Variable IRI="urn:swrl:var#p"/>
+                <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">40</Literal>
+            </BuiltInAtom>
+        </Body>
+        <Head>
+            <ClassAtom>
+                <Class IRI="#Moderate"/>
+                <Variable IRI="urn:swrl:var#w"/>
+            </ClassAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Body>
+            <ClassAtom>
+                <Class IRI="#Wine"/>
+                <Variable IRI="urn:swrl:var#w"/>
+            </ClassAtom>
+            <DataPropertyAtom>
+                <DataProperty IRI="#hasRating"/>
+                <Variable IRI="urn:swrl:var#w"/>
+                <Variable IRI="urn:swrl:var#r"/>
+            </DataPropertyAtom>
+            <BuiltInAtom IRI="http://www.w3.org/2003/11/swrlb#greaterThan">
+                <Variable IRI="urn:swrl:var#r"/>
+                <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">4</Literal>
+            </BuiltInAtom>
+        </Body>
+        <Head>
+            <ClassAtom>
+                <Class IRI="#Top"/>
+                <Variable IRI="urn:swrl:var#w"/>
+            </ClassAtom>
+        </Head>
+    </DLSafeRule>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Country</IRI>
+        <Literal>País</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Expensive</IRI>
+        <Literal>Vinos con precio elevado</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Moderate</IRI>
+        <Literal>Vinos con precio moderado</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#RedWine</IRI>
+        <Literal>Producto fabricado a partir de uva roja</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:sameAs"/>
+        <IRI>#RedWine</IRI>
+        <Literal>https://dbpedia.org/page/Red_wine</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#RoseWine</IRI>
+        <Literal>Porducto fabricado a partir de mezcla de uvas</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Top</IRI>
+        <Literal>Vinos con máxima puntuación</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#WhiteWine</IRI>
+        <Literal>Producto fabricado a partir de variedades de uva blancas</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Wine</IRI>
+        <Literal>Producto producido a partir de la uva</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#WineAcidity</IRI>
+        <Literal>Acidez del vino con valores en el rango del [1-5] de menor a mayor cantidad</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#WineAroma</IRI>
+        <Literal>Aroma, que olores describe</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#WineBody</IRI>
+        <Literal>Cuerpo del vino, su densidad con valores en el rango del [1-5] de menor a mayor cantidad</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#WineCatalog</IRI>
+        <Literal>Descripción a partir del sabor, aroma y color del vino</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#WineColor</IRI>
+        <Literal>Tonalidad del vino</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#WineFlavor</IRI>
+        <Literal>Sabor del vino</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#WinePrice</IRI>
+        <Literal>Precio de venta medio</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#WineRating</IRI>
+        <Literal>Puntuación media con valores en el rango del [1-5] de menor a mayor cantidad</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#WineReviews</IRI>
+        <Literal>Cantidad de comentarios del vino</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#WineSugar</IRI>
+        <Literal>Cantidad de azucares con valores en el rango del [1-5] de menor a mayor cantidad</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#WineType</IRI>
+        <Literal>Catalogación del vino a partir de la uva predominante segun su variedad.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#WineYear</IRI>
+        <Literal>Año de producción</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>https://dbpedia.org/ontology/WineRegion</IRI>
+        <Literal>Región en la que se produce el vino</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>https://dbpedia.org/ontology/Winery</IRI>
+        <Literal>Fabricante de vinos, compañía productora.</Literal>
+    </AnnotationAssertion>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.5.25.2023-02-15T19:15:49Z) https://github.com/owlcs/owlapi -->
+
